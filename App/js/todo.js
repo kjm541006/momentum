@@ -37,12 +37,3 @@ function handleTodoSubmit(event){
     saveTodos();
 }
 
-todoForm.addEventListener("submit", handleTodoSubmit);
-
-
-const savedTodos = localStorage.getItem(TODOS_KEY);
-console.log(savedTodos);
-if(savedTodos){
-    const parsedTodos = JSON.parse(savedTodos);
-    parsedTodos.forEach(item => console.log("this is the turn of", item));
-}
