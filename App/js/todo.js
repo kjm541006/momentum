@@ -28,21 +28,3 @@ function paintTodo(newTodo){
 }
 
 
-function handleTodoSubmit(event){
-    event.preventDefault();
-    const newTodo = todoInput.value;
-    todoInput.value = "";
-    todos.push(newTodo);
-    paintTodo(newTodo);
-    saveTodos();
-}
-
-todoForm.addEventListener("submit", handleTodoSubmit);
-
-
-const savedTodos = localStorage.getItem(TODOS_KEY);
-console.log(savedTodos);
-if(savedTodos){
-    const parsedTodos = JSON.parse(savedTodos);
-    parsedTodos.forEach(item => console.log("this is the turn of", item));
-}
