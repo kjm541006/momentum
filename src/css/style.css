@@ -27,6 +27,15 @@ body {
   justify-content: flex-end;
 }
 
+#weather {
+  margin: 20px 20px 0px 0px;
+}
+
+#weather span {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+
 #container {
   width: 100%;
   height: 100%;
@@ -35,17 +44,31 @@ body {
   align-items: center;
 }
 
-#login-form input:focus {
+#login-form-input:focus,
+#todo-input:focus {
   outline: none;
 }
 
-#login-form-name {
+#login-form-input::placeholder,
+#todo-input::placeholder {
+  color: rgb(222, 188, 248);
+}
+
+#login-form-input:focus::placeholder,
+#todo-input:focus::placeholder {
+  opacity: 0.3;
+}
+
+#login-form-input,
+#todo-input {
   border: none;
-  background-color: transparent;
   width: 600px;
   height: 50px;
   font-size: 40px;
   border-bottom: 1px solid white;
+  color: rgb(222, 188, 248);
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
 }
 
 #clock {
@@ -58,6 +81,7 @@ body {
 #greeting {
   font-size: 60px;
   color: white;
+  font-weight: 600;
 }
 
 #footer {
@@ -66,6 +90,25 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+
+#todo-list {
+  color: white;
+  font-size: 25px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  width: 500px;
+}
+
+#quote {
+  color: white;
+  font-size: 35px;
 }
 
 body img {

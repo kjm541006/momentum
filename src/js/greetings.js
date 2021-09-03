@@ -74,7 +74,7 @@ function loginFormSubmit(event) {
   const username = loginInput.value;
   localStorage.setItem("username", username);
   greeting.classList.remove("hidden");
-  greeting.innerText = `Hello ${username}`;
+  greeting.innerText = `Hello, ${username}.`;
 }
 
 if (savedUsername === null) {

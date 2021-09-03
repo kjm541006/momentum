@@ -12,7 +12,7 @@ function onGeoSuccess(position) {
       country.innerText = data.sys.country;
       weather.innerText = `${data.weather[0].main} / ${Math.round(
         data.main.temp
-      )}`;
+      )}℃`;
     });
 }
 
