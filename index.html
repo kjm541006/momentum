@@ -4,33 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/style.css?after" />
     <title>Momentum App</title>
   </head>
   <body>
-    <form class="hidden" id="login-form">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <input type="submit" value="Log In" />
-    </form>
-    <h2 id="clock">00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" />
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-      <span></span>
-      <span></span>
+    <div id="top-row">
+      <div id="weather">
+        <span></span>
+        <span></span>
+      </div>
     </div>
-    <div id="weather">
-      <span></span>
-      <span></span>
-    </div>
+    <container id="container">
+      <form class="hidden" id="login-form">
+        <input
+          required
+          maxlength="15"
+          type="text"
+          id="login-form-name"
+          placeholder="What is your name?"
+        />
+      </form>
+      <span id="clock">00:00</span>
+      <h1 id="greeting" class="hidden"></h1>
+    </container>
+    <footer id="footer">
+      <form id="todo-form">
+        <input type="text" placeholder="Write a To Do and Press Enter" />
+      </form>
+      <ul id="todo-list"></ul>
+      <div id="quote">
+        <span></span>
+        <span></span>
+      </div>
+    </footer>
     <script src="src/js/greetings.js"></script>
     <script src="src/js/clock.js"></script>
     <script src="src/js/quotes.js"></script>
